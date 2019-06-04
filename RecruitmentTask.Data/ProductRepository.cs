@@ -16,15 +16,16 @@ namespace RecruitmentTask.Data
             _db = db;
         }
 
-        public async Task<IEnumerable<Product>> GetAll()
+        public async Task<IEnumerable<Product>> GetAll(string name=null, Category? category = null)
         {
-            // jakiś await?
-            return await Task.Run(() =>(_db.Products).OrderBy(x=>x.Name));
+            return await Task.Run(() =>_db.Products.Where(p => string.IsNullOrWhiteSpace(name) || p.Name.Contains(name))
+                                                    .Where(p => category == null || p.Category == category)
+                                                    .OrderBy(p=>p.Name));
         }
 
         public async Task<Product> GetById(int id)
         {
-            return await _db.Products.FindAsync(id);
+            return await Task.Run(() => _db.Products.SingleOrDefault(p => p.Id==id));
         }
 
         public async Task<Product> Add(Product product)

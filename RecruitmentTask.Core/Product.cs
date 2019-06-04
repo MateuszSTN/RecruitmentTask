@@ -12,5 +12,12 @@ namespace RecruitmentTask.Core
         public string Description { get; set; }
         public Category Category { get; set; }
         public decimal Price { get; set; }
+        public decimal PriceWithVat
+        {
+            get
+            {
+                return Price *= 1.125M;
+            }
+        }
     }
 }

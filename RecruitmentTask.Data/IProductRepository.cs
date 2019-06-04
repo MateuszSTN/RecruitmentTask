@@ -6,7 +6,7 @@ namespace RecruitmentTask.Data
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetAll();
+        Task<IEnumerable<Product>> GetAll(string name=null, Category? category =null);
         Task<Product> GetById(int Id);
         Task Update(Product product);
         Task<Product> Add(Product product);

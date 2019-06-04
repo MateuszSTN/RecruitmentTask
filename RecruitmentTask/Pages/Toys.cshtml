@@ -1,0 +1,30 @@
+﻿@page
+@model RecruitmentTask.Pages.ToysModel
+@{
+    ViewData["Title"] = "Toys";
+}
+
+<h1>Toys</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-info">Search</button> <!--add glyphicon instead "Search"-->
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var toy in Model.Toys)
+    {
+        <tr>
+            <td>@toy.Name</td>
+            <td>@toy.Description</td>
+            <td>@toy.Price</td>
+            <td>@toy.PriceWithVat</td>
+        </tr>
+    }
+</table>

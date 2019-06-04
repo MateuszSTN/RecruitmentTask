@@ -1,0 +1,30 @@
+﻿@page
+@model RecruitmentTask.Pages.SportModel
+@{
+    ViewData["Title"] = "Sport products";
+}
+
+<h1>Sport products</h1>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span class="input-group-btn">
+                <button class="btn btn-info">Search</button> <!--add glyphicon instead "Search"-->
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var sportProd in Model.SportProducts)
+    {
+        <tr>
+            <td>@sportProd.Name</td>
+            <td>@sportProd.Description</td>
+            <td>@sportProd.Price</td>
+            <td>@sportProd.PriceWithVat</td>
+        </tr>
+    }
+</table>
