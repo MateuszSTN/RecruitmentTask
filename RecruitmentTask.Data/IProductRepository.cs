@@ -8,8 +8,8 @@ namespace RecruitmentTask.Data
     {
         Task<IEnumerable<Product>> GetAll();
         Task<Product> GetById(int Id);
-        Task<Product> Update(Product product);
-        Task Add(Product product);
-        Task<Product> Delete(int id);
+        Task Update(Product product);
+        Task<Product> Add(Product product);
+        Task Delete(int id);
     }
 }

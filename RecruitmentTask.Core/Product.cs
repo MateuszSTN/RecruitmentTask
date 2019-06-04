@@ -6,9 +6,9 @@ namespace RecruitmentTask.Core
     public class Product
     {
         public int Id { get; set; }
-        [Required, StringLength(80)]
+        [Required]
         public string Name { get; set; }
-        [Required, StringLength(255)]
+        [Required]
         public string Description { get; set; }
         public Category Category { get; set; }
         public decimal Price { get; set; }

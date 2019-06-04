@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RecruitmentTask.Core;
@@ -18,28 +19,39 @@ namespace RecruitmentTask.Data
         public async Task<IEnumerable<Product>> GetAll()
         {
             // jakiś await?
-            return _db.Products;
+            return await Task.Run(() =>(_db.Products).OrderBy(x=>x.Name));
         }
 
         public async Task<Product> GetById(int id)
         {
-            return await _db.Products.FindAsync(id)
+            return await _db.Products.FindAsync(id);
         }
 
-        public async Task Add(Product product)
+        public async Task<Product> Add(Product product)
         {
             // Pomyśleć o dodaniu Cancellation Token
             await _db.AddAsync(product);
             await _db.SaveChangesAsync();
+            return product;
         }
-        public async Task<Product> Update(Product updatedProduct)
+        public async Task Update(Product updatedProduct)
         {
-            throw new NotImplementedException();
+            var product = await _db.Products.FindAsync(updatedProduct.Id);
+            if(product != null)
+            {
+                _db.Products.Update(updatedProduct);
+            }
+            await _db.SaveChangesAsync();
         }
 
-        public async Task<Product> Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var product = await _db.Products.FindAsync(id);
+            if (product != null)
+            {
+                _db.Products.Update(product);
+            }
+            await _db.SaveChangesAsync();
         }
     }
 }
