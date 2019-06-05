@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentTask.Core", "Rec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentTask.Data", "RecruitmentTask.Data\RecruitmentTask.Data.csproj", "{1BEC81D9-AF47-4ED6-82FB-FC5D94E35B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentTask", "RecruitmentTask\RecruitmentTask.csproj", "{078E5B72-1BB4-4498-8D0E-F3428758A631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentTask", "RecruitmentTask\RecruitmentTask.csproj", "{078E5B72-1BB4-4498-8D0E-F3428758A631}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

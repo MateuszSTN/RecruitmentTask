@@ -14,6 +14,8 @@ namespace RecruitmentTask.Pages
     {
         private readonly IProductRepository _productRepository;
 
+        [TempData]
+        public string Message { get; set; }
         public IEnumerable<Product> Products { get; set; }
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
