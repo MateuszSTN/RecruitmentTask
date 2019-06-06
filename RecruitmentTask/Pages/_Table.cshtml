@@ -18,8 +18,8 @@
                 <td>@product.Name</td>
                 <td>@product.Description</td>
                 <td>@product.Category</td>
-                <td>@product.Price.ToString("c")</td>
-                <td>@product.PriceWithVat.ToString("c")</td>
+                <td>£@product.Price.ToString("N2")</td>
+                <td>£@product.PriceWithVat.ToString("N2")</td>
                 <td>
                     <a class="btn btn-outline-info" asp-page="./Edit" asp-route-productId="@product.Id">Edit</a>
                 </td>

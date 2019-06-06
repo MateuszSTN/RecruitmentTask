@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentTask.Data", "Rec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentTask", "RecruitmentTask\RecruitmentTask.csproj", "{078E5B72-1BB4-4498-8D0E-F3428758A631}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentTask.Tests", "RecruitmentTask.Tests\RecruitmentTask.Tests.csproj", "{75743653-BD66-496D-8930-EA65E3F6C341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{078E5B72-1BB4-4498-8D0E-F3428758A631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{078E5B72-1BB4-4498-8D0E-F3428758A631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{078E5B72-1BB4-4498-8D0E-F3428758A631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75743653-BD66-496D-8930-EA65E3F6C341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75743653-BD66-496D-8930-EA65E3F6C341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75743653-BD66-496D-8930-EA65E3F6C341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75743653-BD66-496D-8930-EA65E3F6C341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

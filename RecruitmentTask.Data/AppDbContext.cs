@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using RecruitmentTask.Core;
 
 namespace RecruitmentTask.Data
@@ -11,7 +8,6 @@ namespace RecruitmentTask.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             Database.EnsureCreated();
-            this.Seed();
         }
 
         public DbSet<Product> Products { get; set; }
