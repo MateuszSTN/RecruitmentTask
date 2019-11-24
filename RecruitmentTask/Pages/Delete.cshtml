@@ -1,0 +1,30 @@
+﻿@page "{productId:int}"
+@model RecruitmentTask.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Remove product";
+}
+
+<h3>Are you sure you want to remobe product with Id @Model.Product.Id</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Price with VAT(12.5%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Product.Name</td>
+            <td>@Model.Product.Description</td>
+            <td>@Model.Product.Category</td>
+            <td>@Model.Product.Price.ToString("C2")</td>
+            <td>@Model.Product.PriceWithVat.ToString("C2")</td>
+        </tr>
+    </tbody>
+</table>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

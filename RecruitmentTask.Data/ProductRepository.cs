@@ -26,11 +26,26 @@ namespace RecruitmentTask.Data
             return await Task.Run(() => _db.Products.SingleOrDefault(p => p.Id==id));
         }
 
+        public async Task Create(Product createProduct)
+        {
+            await _db.Products.AddAsync(createProduct);
+            await _db.SaveChangesAsync();
+        }
+
         public async Task Update(Product updatedProduct)
         {
             if(_db.Products.Any(p => p.Id == updatedProduct.Id))
             {
                 _db.Products.Update(updatedProduct);
+            }
+            await _db.SaveChangesAsync();
+        }
+
+        public async Task Delete(Product deleteProduct)
+        {
+            if (_db.Products.Any(p => p.Id == deleteProduct.Id))
+            {
+                _db.Products.Remove(deleteProduct);
             }
             await _db.SaveChangesAsync();
         }

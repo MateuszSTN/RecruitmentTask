@@ -8,7 +8,7 @@
 
 @if (Model.Message != null)
 {
-    <div class="alert alert-info">@Model.Message</div>
+    <div class="alert alert-success">@Model.Message</div>
 }
 
 <form method="get">
@@ -16,7 +16,7 @@
         <div class="input-group">
             <input type="search" class="form-control" asp-for="SearchTerm" />
             <span class="input-group-btn">
-                <button class="btn btn-info">Search</button>
+                <button class="btn btn-secondary">Search</button>
             </span>
         </div>
     </div>

@@ -14,16 +14,19 @@
     <tbody>
         @foreach (var product in Model)
         {
-            <tr>
-                <td>@product.Name</td>
-                <td>@product.Description</td>
-                <td>@product.Category</td>
-                <td>£@product.Price.ToString("N2")</td>
-                <td>£@product.PriceWithVat.ToString("N2")</td>
-                <td>
-                    <a class="btn btn-outline-info" asp-page="./Edit" asp-route-productId="@product.Id">Edit</a>
-                </td>
-            </tr>
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Description</td>
+            <td>@product.Category</td>
+            <td>@product.Price.ToString("C2")</td>
+            <td>@product.PriceWithVat.ToString("C2")</td>
+            <td>
+                <a class="btn btn-outline-info" asp-page="./Edit" asp-route-productId="@product.Id">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-outline-danger" asp-page="./Delete" asp-route-productId="@product.Id">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

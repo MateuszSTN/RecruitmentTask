@@ -29,7 +29,5 @@ namespace RecruitmentTask.Pages
         {
             Products = await _productRepository.GetAll(SearchTerm);
         }
-
-        // TODO: Think about add a Details Page
     }
 }
